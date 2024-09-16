@@ -1,0 +1,14 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT app:app
+instance_class: F2
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 15
+  min_pending_latency: automatic
+  max_pending_latency: 15s
+
+env_variables:
+  GITHUB_LINK: 'https://github.com/sucharith7'
+  LINKEDIN_LINK: 'https://www.linkedin.com/in/sucharith-cherukumalli-30016a141/'

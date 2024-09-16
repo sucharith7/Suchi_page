@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 0.5em; /* Adjust as needed */
+        }
+
+        h2 {
+            margin-top: 0.5em; /* Adjust as needed */
+        }
+
+        .contact {
+            margin-top: 2em; /* Adjust as needed */
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            color: #fff;
+            border-radius: 50%;
+        }
+        .github {
+            background-color: #333;
+        }
+        .linkedin {
+            background-color: #0077b5;
+        }
+        .resume {
+            background-color: #f60;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sai Sucharith Cherukumalli</h1>
+    <h2>Cloud Data Engineer</h2>
+    <div class="icon-container">
+        <a href="{{ github_link }}" class="icon github"><i class="fab fa-github"></i></a>
+        <a href="{{ linkedin_link }}" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="{{ resume_link }}" class="icon resume" target="_blank"><i class="fas fa-file"></i></a>
+    </div>
+    <div class="enquiry">
+        <h3>Enquiry</h3>
+        <form action="/submit_enquiry" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="question">Question:</label><br>
+            <textarea id="question" name="question"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="contact">
+        <h3>Contact Details</h3>
+        <p>Email: <a href="mailto:sucharith07@gmail.com">sucharith07@gmail.com</a></p>
+        <p>Phone: +91 9347361413</p>
+    </div>
+</body>
+</html>
+</html>
